@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block encabezado %}
+    {% include "encabezado.html" %}
+{%endblock %}
+{% block menu %}
+    {% include "administrador/menu.html" %}
+{%endblock %}
+{% block contenido %}
+<h3 class="fw-bold">lista de casos pendietes por asignar</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>empleado</th>
+            <th>descripcion</th>
+            <th>oficina-ambiente</th>
+            <th>fecha</th>
+            <th>estado</th>
+            <th>asignar</th>
+        </tr>    
+    </thead>
+    <tbody>
+        {%for caso in listaCasos %}
+        <tr>
+            <td>{{caso.casSolicitud.solUsuario.first_name}}{{Caso.casSolicitud.solUsuario.last_name}} </td>
+            <td>{{caso.casSolicitud.solDescripcion}} </td>
+            <td>{{caso.casSolicitud.solOficinaAmbiente.ofiNombre}} </td>
+            <td>{{caso.casSolicitud.fechaHoraCreacion}} </td>
+            <td>{{caso.casEstado}} </td>
+            <td>
+                <i class="fa fa-edit"> </i>
+            </td>
+        </tr>
+    </tbody>     
+</table>
+
+{%endblock %}
+{% block piePagina %}
+    {% include "piePagina.html" %}
+{%endblock %}
