@@ -21,7 +21,7 @@ estadoCaso =[
 
 class OficinaAmbiente(models.Model):
     ofiTipo = models.CharField(max_length=15, choices=tipoOficinaAmbiente,
-                               db_comment="tipo de oficina")
+                    db_comment="tipo de oficina")
     ofiNombre = models.CharField(max_length=50, unique=True, db_comment="Nombre de la oficina o ambiente")
     
     fechaHoraCreacion = models.DateTimeField(auto_now_add=True,

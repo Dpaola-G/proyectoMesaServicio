@@ -12,6 +12,7 @@ urlpatterns = [
     path('inicioTecnico/', views.inicioTecnico),
     path('inicioEmpleado/', views.inicioEmpleado),   
     path('listarCasosParaAsignar/', views.listarCasos),   
+    path('registrarSolicitud/',views.registrarSolicitud),
     path('salir/', views.Salir)
  
     
